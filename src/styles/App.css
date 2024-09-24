@@ -1,146 +1,167 @@
+/* Define as variáveis de CSS para reutilização das cores em todo o documento */
 :root {
-  --background-body: #E5E5E5;
-  --background-content: #1D1D1D;
-  --text-color: #292929;
-  --primary-color: #4DFF7C;
-  --second-color: #89DDFF;
+  --background-body: #E5E5E5;       /* Cor de fundo geral do corpo da página */
+  --background-content: #1D1D1D;    /* Cor de fundo para conteúdos específicos, como o header */
+  --text-color: #292929;            /* Cor padrão para textos */
+  --primary-color: #4DFF7C;         /* Cor primária usada para elementos destacados */
+  --second-color: #89DDFF;          /* Cor secundária usada para elementos complementares */
 }
 
+/* Estilos aplicados ao elemento <body> */
 body {
-  margin: 0;
-  font-size: 1rem;
+  margin: 0; /* Remove a margem padrão do navegador */
+  font-size: 1rem; /* Define o tamanho da fonte base */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-body);
-  color: var(--text-color);
+    sans-serif; /* Define a família de fontes para o texto */
+  -webkit-font-smoothing: antialiased; /* Suaviza a fonte em navegadores WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Suaviza a fonte em navegadores Firefox no macOS */
+  background-color: var(--background-body); /* Aplica a cor de fundo definida nas variáveis */
+  color: var(--text-color); /* Aplica a cor de texto definida nas variáveis */
 }
 
+/* Estilos para o elemento <header> */
 header {
-  position: fixed;
-  width: 100%;
-  height: 3.5rem;
-  top: 0px;
-  left: 0px;
-  background-color: var(--background-content);
-  color: var(--background-body);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  position: fixed; /* Fixa o header no topo da página */
+  width: 100%; /* Define a largura do header para 100% da tela */
+  height: 3.5rem; /* Define a altura do header */
+  top: 0px; /* Posiciona o header no topo */
+  left: 0px; /* Posiciona o header à esquerda */
+  background-color: var(--background-content); /* Aplica a cor de fundo definida para conteúdo */
+  color: var(--background-body); /* Define a cor do texto no header */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra sutil abaixo do header */
+  z-index: 10; /* Garante que o header fique acima de outros elementos */
 }
 
+/* Estilos para o conteúdo interno do header */
 .header__content {
-  max-width: 1280px;
-  padding: 0 1rem;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 3.5rem;
+  max-width: 1280px; /* Define a largura máxima do conteúdo */
+  padding: 0 1rem; /* Adiciona padding horizontal */
+  margin: auto; /* Centraliza o conteúdo horizontalmente */
+  display: flex; /* Utiliza Flexbox para layout */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  position: relative; /* Define o posicionamento relativo para ajustes internos */
+  height: 3.5rem; /* Define a altura igual à do header */
 }
 
+/* Estilos para o elemento com a classe 'logo' */
 .logo {
-  font-size: 20px;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  color: var(--background-body);
+  font-size: 20px; /* Define o tamanho da fonte do logo */
+  display: flex; /* Utiliza Flexbox para layout interno */
+  gap: 0.5rem; /* Adiciona espaçamento entre os itens do logo */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  color: var(--background-body); /* Define a cor do texto do logo */
 }
 
+/* Estilos para o elemento <main> */
 main {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 3rem;
-  margin-top: 4.5rem;
-  padding: 2rem;
-  /* background-color: var(--background-content); */
-  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-  border-radius: 3px;
+  width: 80%; /* Define a largura do main para 80% da largura disponível */
+  margin: auto; /* Centraliza o main horizontalmente */
+  margin-bottom: 3rem; /* Adiciona margem inferior */
+  margin-top: 4.5rem; /* Adiciona margem superior para afastar do header fixo */
+  padding: 2rem; /* Adiciona padding interno */
+  /* background-color: var(--background-content); */ /* Comentado: Define a cor de fundo do main */
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */ /* Comentado: Adiciona sombra ao main */
+  border-radius: 3px; /* Adiciona bordas arredondadas */
 }
 
+/* Estilos para o elemento <form> */
 form {
-  width: fit-content;
-  margin: auto;
+  width: fit-content; /* Define a largura do formulário para ajustar ao conteúdo */
+  margin: auto; /* Centraliza o formulário horizontalmente */
 }
 
+/* Estilos para elementos <input> e <select> dentro do formulário */
 input, select {
-  border: none;
-  border-radius: 3px;
-  padding: 6px;
-  margin:  0 6px;
+  border: none; /* Remove a borda padrão */
+  border-radius: 3px; /* Adiciona bordas arredondadas */
+  padding: 6px; /* Adiciona padding interno */
+  margin: 0 6px; /* Adiciona margem horizontal */
 }
 
+/* Estilos para elementos <h3> */
 h3 {
-  text-align: center;
-  margin-top: 0;
+  text-align: center; /* Centraliza o texto */
+  margin-top: 0; /* Remove a margem superior */
 }
 
+/* Estilos para elementos <button> */
 button {
-  background-color: var(--second-color);
-  color: var(--text-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: bold;
+  background-color: var(--second-color); /* Define a cor de fundo do botão */
+  color: var(--text-color); /* Define a cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  border-radius: 3px; /* Adiciona bordas arredondadas */
+  font-weight: bold; /* Define o texto como negrito */
 }
 
+/* Estilos para o contêiner de botões */
 .buttons {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 0.5rem;
+  width: 100%; /* Define a largura para 100% do contêiner pai */
+  display: flex; /* Utiliza Flexbox para layout */
+  justify-content: space-around; /* Distribui espaço ao redor dos botões */
+  gap: 0.5rem; /* Adiciona espaçamento entre os botões */
 }
 
+/* Estilos específicos para botões de submissão */
 .btn-submit {
-  background-color: var(--primary-color);
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: bolder;
+  background-color: var(--primary-color); /* Define a cor de fundo do botão de submissão */
+  padding: 6px 12px; /* Define o padding interno */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  font-weight: bolder; /* Define o texto como mais negrito */
 }
 
+/* Efeito de hover para botões */
 button:hover,
 .btn-submit:hover {
-  opacity: 0.8;
+  opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
 }
 
+/* Estilos para o contêiner de todos os usuários */
 .all-users {
-margin-top: 3rem;
+  margin-top: 3rem; /* Adiciona margem superior */
 }
 
+/* Estilos para títulos e linhas de dados */
 .titles,
 .row {
-  width: 100%;
-  display: flex;
-  text-align: center;
-}
-.titles{
-  font-weight: bold;
-  background-color: var(--text-color);
-  color: var(--background-body);
+  width: 100%; /* Define a largura para 100% do contêiner pai */
+  display: flex; /* Utiliza Flexbox para layout */
+  text-align: center; /* Centraliza o texto */
 }
 
+/* Estilos específicos para os títulos */
+.titles{
+  font-weight: bold; /* Define o texto como negrito */
+  background-color: var(--text-color); /* Define a cor de fundo dos títulos */
+  color: var(--background-body); /* Define a cor do texto dos títulos */
+}
+
+/* Estilos para divs dentro de títulos e linhas, e para inputs e selects dentro de linhas */
 .titles div,
 .row input,
 .row select,
-  .row div{
-  width: 20%;
-  padding: 0.5rem;
+.row div{
+  width: 20%; /* Define a largura de cada coluna para 20% */
+  padding: 0.5rem; /* Adiciona padding interno */
 }
 
+/* Classe para ocultar o formulário */
 .hide-form {
-  display: none;
+  display: none; /* Esconde o elemento */
 }
 
+/* Media query para telas com largura máxima de 920px */
 @media screen and (max-width: 920px) {
   main {
-    width: 90%;
+    width: 90%; /* Aumenta a largura do main para 90% */
   }
 }
 
+/* Media query para telas com largura máxima de 520px */
 @media screen and (max-width: 520px) {
   main {
-    width: 100%;
+    width: 100%; /* Define a largura do main para 100% */
   }
 }
